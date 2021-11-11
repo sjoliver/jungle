@@ -1,3 +1,4 @@
+
 <section class="cart-show">
 
   <header class="page-header">
@@ -25,7 +26,7 @@
             TOTAL:
           </th>
           <th>
-            <%= cart_subtotal_cents / 100.0 %>
+            <%= humanized_money_with_symbol(cart_subtotal_cents / 100.0) %>
           </th>
         </tr>
       </tfoot>

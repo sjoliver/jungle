@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  # root = get '/'
+  # get request to '/' should be sent to 'products' (syntax = 'controller#action')
   root to: 'products#index'
 
   resources :products, only: [:index, :show]

@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   validates :email, uniqueness: { case_sensitive: false }
   validates :password, length: { minimum: 3 }
   validates :email, :name, presence: true
+  before_save { email.downcase! }
   has_secure_password
 
   def self.authenticate_with_credentials (email, password)
